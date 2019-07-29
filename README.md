@@ -3,6 +3,8 @@ It's a proof of concept that a reinforcement learning agent can do a task in the
 
 ![Agent is doing the task](env_video-view-1.gif)
 
+# Reference
+If you re-use this work, please cite:
 
 # Copyright
 Copyright © 2018-2019 [LaTIM U1101 Inserm](http://latim.univ-brest.fr/)
