@@ -5,7 +5,6 @@ It's a proof of concept that a reinforcement learning agent can do a task in the
 
 
 # Copyright
-Inserm License
 Copyright © 2018-2019 [LaTIM U1101 Inserm!](http://latim.univ-brest.fr/)
 
 
