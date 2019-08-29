@@ -23,7 +23,7 @@
 #--num-runs=<n> - Sets the number of concurrent training sessions to perform. Default is set to 1. Set to higher values when benchmarking performance and multiple training sessions is desired. Training sessions are independent, and do not improve learning performance.
 #--worker-id=<n> – When you are running more than one training environment at the same time, assign each a unique worker-id number. The worker-id is added to the communication port opened between the current instance of mlagents-learn and the ExternalCommunicator object in the Unity environment. Defaults to 0.
 
-PYTHONPATH="$HOME/ClusterGPU/data_GPU/hassan/SurgerySimulator/RL Cataract surgery/ml-agents/:"
+PYTHONPATH="../../ml-agents/:"
 export PYTHONPATH
 
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH

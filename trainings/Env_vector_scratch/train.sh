@@ -21,11 +21,8 @@
 
 set -eux
 
-PYTHONPATH="$HOME/data_GPU/SurgerySimulator/ml-agents/:"
+PYTHONPATH="../../ml-agents/:"
 export PYTHONPATH
 
-echo  "We need to cd to this path: $1"
-cd $1
-
-python3 ${HOME}/data_GPU/SurgerySimulator/ml-agents/mlagents/trainers/learn.py config.yaml --run-id=cataractEnv-vector \
+python3 ../../ml-agents/mlagents/trainers/learn.py config.yaml --run-id=cataractEnv-vector \
  --env=cataractEnv-vec.x86_64 --save-freq=25000 --keep-checkpoints=1000 --worker-id=1 --train --no-graphics --load
