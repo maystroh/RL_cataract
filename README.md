@@ -10,7 +10,7 @@ incision shape done by the agent on the capsule lens. In other words, moving tow
 positive rewards and moving away from the lens gives the agent negative rewards. In addition, circular incision on
 the capsule lens gives positive rewards and non-circular one gives negative rewards.
 
-The gif below shows a reinforcement learning agent episode where the agent had access to the
+The image above shows a reinforcement learning agent episode where the agent had access to the
 3-D coordinates and motion vectors: the surgical instrument enters through a small incision visible on the right
 side of the eye and makes a circular incision on the front side of the capsule. This episode shows that the agent is
 able to incise a roughly circular piece of the lens capsule. This highly demonstrates the ability of a RL agent to
