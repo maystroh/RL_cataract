@@ -4,8 +4,7 @@ environment is based on Unity. The environment consists of an eye with one small
 
 # PPO agent
 ![Agent is doing the task](env_video-view-1.gif)
-This project is based on [ml-agents](https://github.com/Unity-Technologies/ml-agents) library build by Unity. A PPO agent is trained to perform the capsulorhexis task using the 3-D coordinates and the motion vectors of the tool. The model-free agent is trained with handcrafted dense rewards, guiding the policy optimisation
-towards more promising solutions. The reward strategy is based on two factors: the distance to the lens and the
+This project is based on [ml-agents](https://github.com/Unity-Technologies/ml-agents) library built by Unity. A PPO agent is trained to perform the capsulorhexis task. The model-free agent is trained with handcrafted dense rewards, guiding the policy optimisation towards more promising solutions. The reward strategy is based on two factors: the distance to the lens and the
 incision shape done by the agent on the capsule lens. In other words, moving towards the lens gives the agent
 positive rewards and moving away from the lens gives the agent negative rewards. In addition, circular incision on
 the capsule lens gives positive rewards and non-circular one gives negative rewards.
@@ -17,7 +16,7 @@ able to incise a roughly circular piece of the lens capsule. This highly demonst
 perform this surgical task.
 
 # Installation
-We're using a singularity image built using ```DockerFile``` file in the project. You can find the singularity image in this [link](http://tiny.cc/764wbz). 
+To avoid installation problems, we're using a singularity image built using ```DockerFile``` file in the project. You can find the singularity image in this [link](http://tiny.cc/764wbz). 
 
 ### Dependencies
 If you want to build your own singularity image you have to install:
