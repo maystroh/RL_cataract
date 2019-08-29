@@ -4,7 +4,7 @@ environment is based on Unity. The environment consists of an eye with one small
 
 # PPO agent
 ![Agent is doing the task](env_video-view-1.gif)
-A PPO agent is trained to perform the capsulorhexis task using the 3-D coordinates and the motion vectors of the tool. The model-free agent is trained with handcrafted dense rewards, guiding the policy optimisation
+This project is based on [ml-agents](https://github.com/Unity-Technologies/ml-agents) library build by Unity. A PPO agent is trained to perform the capsulorhexis task using the 3-D coordinates and the motion vectors of the tool. The model-free agent is trained with handcrafted dense rewards, guiding the policy optimisation
 towards more promising solutions. The reward strategy is based on two factors: the distance to the lens and the
 incision shape done by the agent on the capsule lens. In other words, moving towards the lens gives the agent
 positive rewards and moving away from the lens gives the agent negative rewards. In addition, circular incision on
@@ -16,8 +16,44 @@ side of the eye and makes a circular incision on the front side of the capsule. 
 able to incise a roughly circular piece of the lens capsule. This highly demonstrates the ability of a RL agent to
 perform this surgical task.
 
-# Dependencies
+# Installation
+We're using a singularity image built using ```DockerFile``` file in the project. You can find the singularity image in this [link](http://tiny.cc/764wbz). 
 
+### Dependencies
+If you want to build your own singularity image you have to install:
+- nvidia-docker
+- singularity
+
+Then, use the following commands:
+```
+*************** From docker image to singularity image*********************
+
+# Start a docker registry or push the image on the online docker hub registry
+docker pull registry (https://hub.docker.com/r/library/registry/)
+docker run -d -p 5000:5000 --restart=always --name registry registry:2 (here is the source https://docs.docker.com/registry/deploying/#copy-an-image-from-docker-hub-to-your-registry)
+
+#Build a docker image from a docker file
+nvidia-docker build -t name_image -f ~/pathToDockerfile .
+
+# Push local docker container to it
+docker tag name_image localhost:5000/nameOfTag
+docker push localhost:5000/nameOfTag
+
+# Build singularity container
+SINGULARITY_NOHTTPS=1 singularity build NameOfImage.simg docker://localhost:5000/nameOfTag:latest
+```
+
+# Usage
+To launch a training, go to ```trainings/Env_vector_scratch/``` and use this command:
+```
+singularity exec --nv path_to_sing_image/mlagents_image.simg sh train.sh
+```
+
+```eval.sh``` is a script to launch the environment continuously on the local machine using the models learnt during training.
+
+# Notes to consider for Env_vector_scratch
+- So far, the agent is trained using only PPO
+- During training, the agent is fed the 3D coordinates of the capsulorhexis cystotome canula and its motion vectors.
 
 # Copyright
 Copyright © 2018-2019 [LaTIM U1101 Inserm](http://latim.univ-brest.fr/)
