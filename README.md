@@ -25,7 +25,7 @@ If you want to build your own singularity image you have to install:
 
 Then, use the following commands:
 ```
-*************** From docker image to singularity image*********************
+*************** From docker file to singularity image*********************
 
 # Start a docker registry or push the image on the online docker hub registry
 docker pull registry (https://hub.docker.com/r/library/registry/)
