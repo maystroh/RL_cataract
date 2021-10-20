@@ -49,7 +49,7 @@ singularity exec --nv path_to_sing_image/mlagents_image.simg sh train.sh
 ```
 
 To evalute the model, please create a conda environment with ```env.yml``` and launch the following script:
-```eval.sh``` is a script to launch the environment continuously on the local machine using the models learnt during training.
+```eval.sh #is a script to launch the environment continuously on the local machine using the models learnt during training.```
 Please note that singularity did not work to launch the evaluation script. 
 # Notes to consider for Env_vector_scratch
 - So far, the agent is trained using only PPO
