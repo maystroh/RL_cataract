@@ -16,7 +16,7 @@ able to incise a roughly circular piece of the lens capsule. This highly demonst
 perform this surgical task.
 
 # Installation
-To avoid installation problems, we're using a singularity image built using ```DockerFile``` file in the project. Please contact us in order to share with the  the singularity images needed to launch the experiments.
+To avoid installation problems, we're using a singularity image built using ```DockerFile``` file in the project. Please contact us in order to share with the  singularity images needed to launch the experiments.
 
 ### Dependencies
 If you want to build your own singularity image you have to install:
